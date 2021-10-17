@@ -1,0 +1,1 @@
+# AllureMavenJunit4
