@@ -19,7 +19,6 @@
         <aspectj.version>1.8.10</aspectj.version>
         <allure.junit4.version>2.15.0</allure.junit4.version>
         <allure-maven>2.10.0</allure-maven>
-        <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <maven.surefire.plugin.version>2.20</maven.surefire.plugin.version>
     </properties>
     
@@ -50,12 +49,7 @@
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                         -Dfile.encoding=${encoding.type}
                     </argLine>
-                    <properties>
-                        <property>
-                            <name>listener</name>
-                            <value>io.qameta.allure.junit4.AllureJunit4</value>
-                        </property>
-                    </properties>
+                    
                     <systemProperties>		
                          <property>		
                              <name>allure.results.directory</name>		
