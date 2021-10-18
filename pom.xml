@@ -49,7 +49,12 @@
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                         -Dfile.encoding=${encoding.type}
                     </argLine>
-                    
+                    <properties>
+                        <property>
+                            <name>listener</name>
+                            <value>io.qameta.allure.junit4.AllureJunit4</value>
+                        </property>
+                    </properties>
                     <systemProperties>		
                          <property>		
                              <name>allure.results.directory</name>		
