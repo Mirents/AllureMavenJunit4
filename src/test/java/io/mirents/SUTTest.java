@@ -1,5 +1,6 @@
-package com.github.mirents;
+package io.mirents;
 
+import io.mirents.SystemUnderTest;
 import io.qameta.allure.Allure;
 import org.junit.Assert;
 import org.junit.Test;

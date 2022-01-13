@@ -1,4 +1,4 @@
-package com.github.mirents;
+package io.mirents;
 
 /**
  * Демонстрационный класс для запуска тестов
