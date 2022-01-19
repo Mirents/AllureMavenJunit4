@@ -1,31 +1,29 @@
 package io.mirents;
 
-import io.mirents.SystemUnderTest;
 import io.qameta.allure.Allure;
-import org.junit.Assert;
-import org.junit.Test;
+import io.qameta.allure.Description;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
-/**
- * Демонстрационный набор тестов класса SystemUnderTest
- * @author Raven
- */
 public class SUTTest {
     
     @Test
+    @Description("Some detailed test description")
     public void shouldEqualsSpeedTest() {
         Allure.step("Создание экземпляра класса");
         SystemUnderTest sut = new SystemUnderTest(7);
-        
+        System.out.println("shouldEqualsSpeedTest");
         Allure.step("Проверка состояния");
-        Assert.assertEquals("Соответствие параметра", 7, sut.getSpeed());
+        Assertions.assertEquals(7, sut.getSpeed(), "Соответствие параметра");
     }
     
     @Test
+    @Description("Some detailed test description")
     public void shouldNotEqualsSpeedTest() {
         Allure.step("Создание экземпляра класса");
-        SystemUnderTest sut = new SystemUnderTest(7);
-        
+        SystemUnderTest sut = new SystemUnderTest(8);
+        System.out.println("shouldNotEqualsSpeedTest");
         Allure.step("Проверка состояния");
-        Assert.assertEquals("Соответствие параметра", 8, sut.getSpeed());
+        Assertions.assertEquals(8, sut.getSpeed(), "Соответствие параметра");
     }
 }
