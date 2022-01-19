@@ -12,7 +12,7 @@ public class SUTTest {
     public void shouldEqualsSpeedTest() {
         Allure.step("Создание экземпляра класса");
         SystemUnderTest sut = new SystemUnderTest(7);
-        System.out.println("shouldEqualsSpeedTest");
+        
         Allure.step("Проверка состояния");
         Assertions.assertEquals(7, sut.getSpeed(), "Соответствие параметра");
     }
@@ -21,8 +21,8 @@ public class SUTTest {
     @Description("Some detailed test description")
     public void shouldNotEqualsSpeedTest() {
         Allure.step("Создание экземпляра класса");
-        SystemUnderTest sut = new SystemUnderTest(8);
-        System.out.println("shouldNotEqualsSpeedTest");
+        SystemUnderTest sut = new SystemUnderTest(7);
+        
         Allure.step("Проверка состояния");
         Assertions.assertEquals(8, sut.getSpeed(), "Соответствие параметра");
     }
