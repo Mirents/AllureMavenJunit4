@@ -2,8 +2,8 @@ package io.mirents;
 
 import io.qameta.allure.Allure;
 import io.qameta.allure.Description;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import junit.framework.Assert;
+import org.junit.Test;
 
 public class SUTTest {
     
@@ -14,16 +14,16 @@ public class SUTTest {
         SystemUnderTest sut = new SystemUnderTest(7);
         
         Allure.step("Проверка состояния");
-        Assertions.assertEquals(7, sut.getSpeed(), "Соответствие параметра");
+        Assert.assertEquals("Соответствие параметра", 7, sut.getSpeed());
     }
     
     @Test
     @Description("Some detailed test description")
     public void shouldNotEqualsSpeedTest() {
         Allure.step("Создание экземпляра класса");
-        SystemUnderTest sut = new SystemUnderTest(7);
+        SystemUnderTest sut = new SystemUnderTest(8);
         
         Allure.step("Проверка состояния");
-        Assertions.assertEquals(8, sut.getSpeed(), "Соответствие параметра");
+        Assert.assertEquals("Соответствие параметра", 7, sut.getSpeed());
     }
 }
