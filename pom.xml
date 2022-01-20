@@ -60,7 +60,6 @@
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                         -Xmx1024m
                         -Dfile.encoding=${encoding.type}
-                        -Dallure.results.directory=${project.build.directory}/reports/allure-results
                         -Djunit.jupiter.extensions.autodetection.enabled=true
                     </argLine>
                 </configuration>
@@ -78,8 +77,6 @@
                 <version>${allure.maven.version}</version>
                 <configuration>
                     <reportVersion>${allure.report.version}</reportVersion>
-                    <resultsDirectory>${project.build.directory}/reports/allure-results</resultsDirectory>
-                    <reportDirectory>${project.build.directory}/reports/allure-reports</reportDirectory>
                 </configuration>
             </plugin>
         </plugins>
